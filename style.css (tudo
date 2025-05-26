@@ -1,99 +1,126 @@
-@import
-url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
-:root{
---branco: white;
---cor-de-fundo: #00162E;
---fundo-senha: #00244D;
---fundo-texto: #001E40;
---borda: #0075FF;
---roboto: 'Roboto', sans-serif;
---roboto-mono: 'Roboto Mono', monospace;
-}
-*{
-font-weight: 400;
+1 @import
+2 url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
+3 :root{
+4 --branco: white;
+5 --cor-de-fundo: #00162E;
+6 --fundo-senha: #00244D;
+7 --fundo-texto: #001E40;
+8 --borda: #0075FF;
+9 --roboto: 'Roboto', sans-serif;
+10 --roboto-mono: 'Roboto Mono', monospace;
+11 }
+12 *{
+13 font-weight: 400;
+14 }
+15 body{
+16 color: var(--branco);
+17 background-color: var(--cor-de-fundo);
+18 font-family: var(--roboto);
+19 }
+20 .titulo-principal{
+21 font-family: var(--roboto-mono);
+22 font-size: 32px;
+23 }
+24 .titulo-secundario{
+25 font-size: 24px;
+26 }
+27 .conteudo-titulo{
+28 text-align: center;
+29 margin-top: 80px;
+30 }
+31 .conteudo-senha{
+32 margin-top: 80px;
+33 background: var(--fundo-senha);
+34 padding: 24px;
+35 border-bottom: 6px solid var(--borda);
+36 }
+37 #campo-senha{
+38 background-color: var(--fundo-senha);
+39 border: none;
+40 color: var(--branco);
+41 font-family: var(--roboto-mono);
+42 font-size: 40px;
+43 width: 70%;
+44 }
+45 #campo-senha:focus{
+46 outline: none;
+47 }
+48 .conteudo{
+49 max-width: 1200px;
+50 margin: 0 auto;
+51 }
+52 .parametro{
+53 background-color: var(--fundo-texto);
+54 border: 2px solid var(--borda);
+55 margin-top: 32px;
+56 padding: 24px;
+57 }
+58 .parametro-titulo{
+59 font-family: var(--roboto-mono);
+60 font-size: 28px;
+61 }
+62 .parametro-senha__titulo{
+63 font-size:24px;
+64 }
+65 .parametro-coluna__senha{
+66 display: flex;
+67 flex-direction: column;
+68 justify-content: center;
+69 }
+70 .parametro-senha{
+71 width: 50%;
+72 margin: 0 auto;
 
-}
-body{
-color: var(--branco);
-background-color: var(--cor-de-fundo);
-font-family: var(--roboto);
-}
-.titulo-principal{
-font-family: var(--roboto-mono);
-font-size: 32px;
-}
-.titulo-secundario{
-font-size: 24px;
-}
-.conteudo-titulo{
-text-align: center;
-margin-top: 80px;
-}
-.conteudo-senha{
-margin-top: 80px;
-background: var(--fundo-senha);
-padding: 24px;
-border-bottom: 6px solid var(--borda);
-}
-#campo-senha{
-background-color: var(--fundo-senha);
-border: none;
-color: var(--branco);
-font-family: var(--roboto-mono);
-font-size: 40px;
-width: 70%;
-}
-#campo-senha:focus{
-outline: none;
-}
-.conteudo{
-max-width: 1200px;
-margin: 0 auto;
-}
-.parametro{
-background-color: var(--fundo-texto);
-border: 2px solid var(--borda);
-margin-top: 32px;
-padding: 24px;
-
-}
-.parametro-titulo{
-font-family: var(--roboto-mono);
-font-size: 28px;
-}
-.parametro-senha__titulo{
-font-size:24px;
-}
-.parametro-coluna__senha{
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-.parametro-senha{
-width: 50%;
-margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-.parametro-coluna__senha{
-flex-direction: row;
-}
-}
-.parametro-senha-botoes{
-display: flex;
-justify-content: center;
-}
-.parametro-senha__botao{
-background-color: var(--cor-de-fundo);
-color: var(--branco);
-border: 2px solid var(--borda);
-padding: 24px;
-font-size: 24px;
-cursor: pointer;
-}
-.parametro-senha__texto{
-border-top: 2px solid var(--borda);
-border-bottom: 2px solid var(--borda);
-padding: 24px;
-margin: 0px;
-font-size: 24px;
-}
+73 }
+74 .parametro-senha-botoes{
+75 display: flex;
+76 justify-content: center;
+77 }
+78 .parametro-senha__botao{
+79 background-color: var(--cor-de-fundo);
+80 color: var(--branco);
+81 border: 2px solid var(--borda);
+82 padding: 24px;
+83 font-size: 24px;
+84 cursor: pointer;
+85 }
+86 .parametro-senha__texto{
+87 border-top: 2px solid var(--borda);
+88 border-bottom: 2px solid var(--borda);
+89 padding: 24px;
+90 margin: 0px;
+91 font-size: 24px;
+92 }
+93 /*barra azul de fundo*/
+94 .barra{
+95 background-color: var(--fundo-senha);
+96 height: 30px;
+97 width: 100%;
+98 }
+99 .forca{
+100 height: 30px;
+101 position: relative; /*sobrepor a barra de fundo*/
+102 bottom: 30px;
+103 }
+104 .fraca{
+105 width: 25%;
+106 background-color: #E71B32;
+107 }
+108 .media{
+109 width: 50%;
+110 background-color: #faf408;
+111 }
+112 .forte{
+113 width: 100%;
+114 background-color: #00ff85;
+115 }
+116 /*deixa a legende fraca, média, forte em linha*/
+117 .parametro-senha-textos{
+118 display: flex;
+119 justify-content: space-between;
+120 }
+121 @media screen and (min-width: 768px) {
+122 .parametro-coluna__senha{
+123 flex-direction: row;
+124 }
+125 }
